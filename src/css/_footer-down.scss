@@ -1,0 +1,281 @@
+@import "colors";
+
+.footer-down {
+  background-color: $main-dark-blue;
+
+  .wrapper-mobile {
+    display: none;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 1240px;
+    padding: 88px 20px 72px 20px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+
+    .left {
+      min-width: 57%;
+
+      img {
+        color: $white;
+        margin-bottom: 35px;
+      }
+
+      .text-1 {
+        font-size: 12px;
+        line-height: 158%;
+        color: $grey-20;
+        margin-bottom: 24px;
+
+      }
+
+      .text-2 {
+        font-size: 12px;
+        line-height: 158%;
+        color: $grey-20;
+
+        display: flex;
+
+        .item {
+          margin-right: 24px;
+
+        }
+      }
+    }
+
+    .right {
+      .contacts {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+
+        .phone {
+          margin-right: 72px;
+
+          .title {
+            font-weight: 600;
+            font-size: 21px;
+            line-height: 120%;
+            color: $white;
+            margin-bottom: 1px;
+            cursor: pointer;
+
+          }
+
+          .about {
+            font-size: 11px;
+            line-height: 158%;
+            color: $grey-20;
+
+          }
+        }
+
+        .social-networks {
+          img {
+            margin-right: 22px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .place {
+        font-size: 12px;
+        line-height: 158%;
+        color: $grey-20;
+        margin-bottom: 24px;
+      }
+
+      .text-1 {
+        font-size: 10px;
+        line-height: 158%;
+        color: $main-grey;
+        margin-bottom: 8px;
+
+      }
+
+      .text-2 {
+        font-size: 10px;
+        line-height: 158%;
+        color: $main-grey;
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1115px) {
+
+  .footer-down {
+    .wrapper {
+
+      .left {
+        min-width: 45%;
+
+        img {
+        }
+
+        .text-1 {
+        }
+
+        .text-2 {
+          .item {
+          }
+        }
+      }
+
+      .right {
+        .contacts {
+          .phone {
+            .title {
+            }
+
+            .about {
+            }
+          }
+
+          .social-networks {
+            img {
+            }
+          }
+        }
+
+        .place {
+        }
+
+        .text-1 {
+
+        }
+
+        .text-2 {
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+  .footer-down {
+    .wrapper {
+      .left {
+        min-width: 240px;
+
+        .text-2 {
+          flex-direction: column;
+
+          .item {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-down {
+
+    .wrapper {
+      display: none;
+    }
+
+    .wrapper-mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px 32px 16px;
+
+    }
+  }
+  .footer-down {
+    .wrapper-mobile {
+      & > img {
+        margin-bottom: 20px;
+        width: 183px;
+        height: auto;
+      }
+
+      .phone {
+        .title {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 120%;
+          color: $white;
+          margin-bottom: 1px;
+          cursor: pointer;
+        }
+
+        .about {
+          font-size: 11px;
+          line-height: 158%;
+          color: $grey-20;
+          margin-bottom: 32px;
+
+        }
+      }
+
+      .social-networks {
+        margin: auto;
+
+        img {
+          margin-right: 22px;
+          margin-bottom: 46px;
+          cursor: pointer;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .text-1 {
+        font-size: 11px;
+        color: $grey-20;
+        margin-bottom: 16px;
+      }
+
+      .place {
+        font-size: 11px;
+        color: $grey-20;
+        margin-bottom: 36px;
+        text-align: center;
+      }
+
+      .text-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+        color: $grey-20;
+        margin-bottom: 24px;
+
+        .item {
+          margin-bottom: 14px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .text-3 {
+        font-size: 10px;
+        line-height: 158%;
+        color: $grey-20;
+        margin-bottom: 6px;
+        text-align: center;
+
+      }
+
+      .text-4 {
+        font-size: 10px;
+        line-height: 158%;
+        color: $grey-20;
+        text-align: center;
+      }
+    }
+  }
+}

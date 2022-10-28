@@ -1,0 +1,157 @@
+@import "colors";
+
+.statistics__block {
+  background-color: $main-dark-blue;
+  color: $white;
+
+  .wrapper {
+
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 0 101px 0;
+    width: 788px;
+    margin: auto;
+    font-size: 23px;
+    line-height: 130%;
+  }
+
+  .items {
+
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 50px 80px 50px;
+
+    .item {
+      position: relative;
+
+      .item-title {
+        position: relative;
+        align-items: baseline;
+        margin-bottom: 8px;
+        z-index: 3;
+        display: flex;
+
+
+        &-1 {
+          img {
+            position: absolute;
+            top: -15px;
+            left: -35px;
+            width: auto;
+            height: 88px;
+            z-index: 2;
+          }
+
+          .text {
+            position: relative;
+            z-index: 3;
+            font-size: 51px;
+            line-height: 110%;
+            font-weight: 600;
+            margin-right: 1px;
+          }
+        }
+
+        &-2 {
+          position: relative;
+          z-index: 3;
+          font-size: 30px;
+          line-height: 110%;
+          font-weight: 600;
+        }
+      }
+
+      .item-text {
+        position: relative;
+        z-index: 3;
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+
+  .statistics__block {
+
+    .wrapper {
+
+    }
+
+    .title {
+    }
+
+    .items {
+      flex-wrap: wrap;
+      max-width: 700px;
+      padding-bottom: 52px;
+
+      .item {
+        margin-bottom: 34px;
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 790px) {
+
+  .statistics__block {
+
+    .title {
+      padding: 46px 32px 48px 32px;
+      width: auto;
+      font-size: 18px;
+      line-height: 162%;
+    }
+
+    .items {
+      width: 400px;
+      justify-content: center;
+
+      .item {
+        text-align: center;
+
+        margin-bottom: 34px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        img {
+        }
+
+        .item-title {
+          justify-content: center;
+
+          &-1 {
+
+            .text {
+              font-size: 40px;
+            }
+          }
+
+          &-2 {
+          }
+        }
+
+        .item-text {
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .statistics__block {
+    .items {
+      width: auto;
+    }
+  }
+}
