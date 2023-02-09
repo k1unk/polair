@@ -1,0 +1,255 @@
+@import "colors";
+
+.header-block {
+  border-bottom: 1px solid $grey-20;
+
+  .wrapper {
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 82px;
+  }
+
+  .header-left {
+    display: flex;
+  }
+
+  .logo {
+    margin-right: 24px;
+    cursor: pointer;
+  }
+
+  .logo__text {
+    font-size: 11px;
+    line-height: 158%;
+    color: $grey;
+    max-width: 300px;
+  }
+
+  .header-right {
+    display: flex;
+    font-size: 14px;
+    color: $main-dark-blue;
+    align-items: center;
+  }
+
+  .settings {
+    display: flex;
+    align-items: center;
+  }
+
+  .mail {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    img {
+      width: 15.2px;
+      height: 12.2px;
+      margin-right: 7px;
+    }
+  }
+
+  .mail__text {
+    margin-right: 32px;
+    color: $main-dark-blue;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .language {
+    margin-right: 33px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .search__btn {
+    width: 15.2px;
+    height: 14.2px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menu div {
+    overflow: hidden;
+  }
+
+  .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: $black-80;
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0;
+    transform: rotate(45deg);
+  }
+
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0;
+    transform: rotate(-45deg);
+  }
+
+}
+
+.menu-block {
+  .menu__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 54px;
+    padding: 0 20px;
+    max-width: 1240px;
+  }
+
+  .menu__item {
+    font-size: 15px;
+    list-style: none;
+    cursor: pointer;
+
+    a {
+      color: $black-80;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .header__block {
+    .header-left {
+      .logo {
+      }
+
+      .logo__text {
+        max-width: 280px;
+      }
+    }
+
+    .header-right {
+      .mail {
+        .mail__text {
+          margin-right: 10px;
+        }
+      }
+
+      .language {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-block {
+    border-bottom: 0;
+
+    .wrapper {
+      height: 48px;
+      padding: 0 16px;
+      align-items: center;
+    }
+
+    .logo {
+      width: 129px;
+      height: 20px;
+    }
+
+    .logo__text {
+      display: none;
+    }
+
+    .header-right {
+      flex-direction: row-reverse;
+
+      .search {
+        height: 18px;
+        width: 18px;
+        margin-right: 22px;
+      }
+
+    }
+  }
+
+  .menu-block {
+    height: 66px;
+    overflow-x: scroll;
+    padding: 16px;
+    margin: 0;
+
+    .menu__item {
+      padding: 8px 12px;
+      font-size: 14px;
+      margin-right: 10px;
+      overflow-x: visible;
+      background-color: $grey-blue-5;
+      white-space: nowrap;
+    }
+  }
+
+}
+
+@media screen and (max-width: 420px) {
+  .header-block{
+    .mail img{
+      margin-right: 30px;
+    }
+    .mail__text {
+      display: none;
+    }
+  }
+}
